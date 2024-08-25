@@ -4,16 +4,49 @@ import javafx.scene.paint.Color
 
 import eu.mihosoft.vrl.v3d.parametrics.*;
 CSG getObject(){
+	if(args==null)
+		args=["Test_key_here"]
 
-	StringParameter word = new StringParameter(	"CaDoodle_TextGeneration_Value",
-										"TEXT",[])
-	StringParameter font = new StringParameter(	"CaDoodle_TextGeneration_Font",
-		"Arial",["Arial","System",
-"Serif",
-"SansSerif",
-"Monospaced"])
-	CSG text = CSG.text( word.getStrValue(),  10,  20, font.getStrValue())
+	StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Value",
+										"Text",[])
+	HashSet<String> fontOptions = new HashSet<>();
+	//fontOptions.addAll(javafx.scene.text.Font.getFontNames() )
+	int index = 0;
+	int numFonts=6
+	for(String font:javafx.scene.text.Font.getFontNames()) {
+		if(font.toLowerCase().contains("mono")&&!fontOptions.contains(font)) {
+			fontOptions.add(font);
+			index++;
+		}
+		if(index>numFonts)
+			break;
+	}
+	index = 0;
+	for(String font:javafx.scene.text.Font.getFontNames()) {
+		if(font.toLowerCase().contains("serif")&&!fontOptions.contains(font)) {
+			fontOptions.add(font);
+			index++;
+		}
+		if(index>numFonts)
+			break;
+	}
+	index = 0;
+	for(String font:javafx.scene.text.Font.getFontNames()) {
+		if(font.toLowerCase().contains("sans")&&!fontOptions.contains(font)) {
+			fontOptions.add(font);
+			index++;
+		}
+		if(index>numFonts)
+			break;
+	}
 	
+	ArrayList<String> option=new ArrayList<>()
+	option.addAll(fontOptions)
+	option.add("Arial")
+	StringParameter font = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Font",
+		option.get(option.size()-1),option)
+	CSG text = CSG.text(word.getStrValue() ,  10,  20, font.getStrValue())
+	CSGDatabase.saveDatabase();
 	text=   text.toZMin()
 				.rotz(-90)
 				.moveToCenterX()
