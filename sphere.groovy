@@ -1,8 +1,6 @@
 import eu.mihosoft.vrl.v3d.*
 import javafx.scene.paint.Color
 
-return new Sphere(10).toCSG().toZMin().setColor(Color.LIGHTBLUE)
-
 import eu.mihosoft.vrl.v3d.CSG
 import eu.mihosoft.vrl.v3d.Cube
 import javafx.scene.paint.Color
