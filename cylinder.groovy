@@ -24,5 +24,3 @@ CSG getObject(){
 		.setRegenerate({getObject()})
 }
 return getObject()
-
-//return new Cylinder(10,20).toCSG().toZMin().setColor(Color.ORANGE)
