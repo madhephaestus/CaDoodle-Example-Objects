@@ -20,7 +20,7 @@ CSG getObject(){
 	LengthParameter bottom = new LengthParameter(	args[0]+"_CaDoodle_CylinderGeneration_Bottom",
 		10,[])
 	int getMM = (int)word.getMM()
-	CSG text =  new Cylinder(top.getMM(),bottom.getMM(),20,getMM).toCSG().toZMin().setColor(Color.PURPLE)
+	CSG text =  new Cylinder(bottom.getMM(),top.getMM(),20,getMM).toCSG().toZMin().setColor(Color.PURPLE)
 	CSGDatabase.saveDatabase();
 	return text
 		.setParameter(word)
