@@ -34,6 +34,11 @@
 	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
 	"file":"cone.groovy",
 	"order":"6"
+	},
+"Roof":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"roof.groovy",
+	"order":"7"
 	}
 	
 }
