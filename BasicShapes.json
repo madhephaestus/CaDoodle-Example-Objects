@@ -44,6 +44,11 @@
 	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
 	"file":"halfCylinder.groovy",
 	"order":"8"
+	},
+"Wedge":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"wedge.groovy",
+	"order":"9"
 	}
 	
 }

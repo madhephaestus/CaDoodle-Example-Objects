@@ -24,6 +24,8 @@ CSG getObject(){
 	CSGDatabase.saveDatabase();
 	return text
 		.setParameter(word)
+		.setParameter(top)
+		.setParameter(bottom)
 		.setRegenerate({getObject()})
 }
 return getObject()
