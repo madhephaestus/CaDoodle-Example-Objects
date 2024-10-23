@@ -49,6 +49,16 @@
 	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
 	"file":"wedge.groovy",
 	"order":"9"
+	},
+"Pyramid":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"pyramid.groovy",
+	"order":"10"
+	},
+"Half Sphere":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"halfSphere.groovy",
+	"order":"11"
 	}
 	
 }
