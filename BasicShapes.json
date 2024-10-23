@@ -74,6 +74,11 @@
 	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
 	"file":"toroid.groovy",
 	"order":"14"
+	},
+"Tube":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"tube.groovy",
+	"order":"15"
 	}
 	
 	
