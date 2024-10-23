@@ -59,6 +59,22 @@
 	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
 	"file":"halfSphere.groovy",
 	"order":"11"
+	},
+"Hexagon":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"hexagon.groovy",
+	"order":"12"
+	},
+"Parapoloid":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"parapoloid.groovy",
+	"order":"13"
+	},
+"Toroid":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"toroid.groovy",
+	"order":"14"
 	}
+	
 	
 }
