@@ -1,2 +1,11 @@
 import com.neuronrobotics.bowlerstudio.vitamins.Vitamins; 
-return Vitamins.get("stepperMotor","Pololu35x26").setIsHole(true)
+import eu.mihosoft.vrl.v3d.CSG
+import eu.mihosoft.vrl.v3d.parametrics.StringParameter
+CSG getObject(){
+	if(args==null)
+		args=["Test_key_here"]
+		StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Size","Pololu35x26",["GenericNEMA11","GenericNEMA14","GenericNEMA17","Pololu35x26"])
+	def part= Vitamins.get("stepperMotor",word.getStrValue()).setIsHole(true)
+	return part.setParameter(word).setRegenerate({getObject()})
+}
+return getObject()

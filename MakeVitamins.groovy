@@ -1,3 +1,5 @@
+import eu.mihosoft.vrl.v3d.CSG
+
 import java.lang.reflect.Type
 import java.nio.file.Files
 import java.nio.file.Path
@@ -22,9 +24,13 @@ int order =0;
 for(String type:Vitamins.listVitaminTypes()) {
 	ArrayList<String> listVitaminSizes = Vitamins.listVitaminSizes(type)
 	String mySize ="";
+	String Options = "["
 	for(String size:listVitaminSizes) {
 		mySize=size
+		Options+="\""+size+"\","
 	}
+	Options=Options.substring(0,Options.length()-1)
+	Options+="]"
 	HashMap<String,String> data = new HashMap<>();
 	data.put("git", gitULR)
 	data.put("order", order++)
@@ -32,8 +38,18 @@ for(String type:Vitamins.listVitaminTypes()) {
 	data.put("file", name)
 	
 	File vitaminGen =  ScriptingEngine.fileFromGit(gitULR, name);
-	String code = "import com.neuronrobotics.bowlerstudio.vitamins.Vitamins; \n"+\
-"return Vitamins.get(\""+type+"\",\""+mySize+"\").setIsHole(true)"
+	String code = 	"import com.neuronrobotics.bowlerstudio.vitamins.Vitamins; \n"+\
+					"import eu.mihosoft.vrl.v3d.CSG\n"+
+					"import eu.mihosoft.vrl.v3d.parametrics.StringParameter\n"+
+					"CSG getObject(){\n"+
+					"\tif(args==null)\n"+
+						"\t\targs=[\"Test_key_here\"]\n"+\
+					"\t	StringParameter word = new StringParameter(	args[0]+\"_CaDoodle_TextGeneration_Size\",\""+mySize+"\","+Options+")\n"+
+					"\tdef part= Vitamins.get(\""+type+"\",word.getStrValue()).setIsHole(true)\n"+
+					"\treturn part.setParameter(word).setRegenerate({getObject()})\n"+\
+					"}\n"+
+					"return getObject()\n"
+					
 	Files.writeString(vitaminGen.toPath(), code, StandardOpenOption.CREATE);
 	tmp.put(type, data)
 }

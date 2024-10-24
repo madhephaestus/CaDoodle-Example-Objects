@@ -1,2 +1,11 @@
 import com.neuronrobotics.bowlerstudio.vitamins.Vitamins; 
-return Vitamins.get("brushlessMotor","sunnysky_x2204").setIsHole(true)
+import eu.mihosoft.vrl.v3d.CSG
+import eu.mihosoft.vrl.v3d.parametrics.StringParameter
+CSG getObject(){
+	if(args==null)
+		args=["Test_key_here"]
+		StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Size","sunnysky_x2204",["GB4315","GBM2804H_100T","TL2955","sunnysky_x2204"])
+	def part= Vitamins.get("brushlessMotor",word.getStrValue()).setIsHole(true)
+	return part.setParameter(word).setRegenerate({getObject()})
+}
+return getObject()
