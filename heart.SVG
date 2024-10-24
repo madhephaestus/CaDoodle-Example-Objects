@@ -37,7 +37,8 @@
   <g
      inkscape:label="Slice 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     style="display:inline">
     <path
        id="rect1"
        style="fill:#f60000;fill-opacity:1;stroke:none;stroke-width:0.9375"
