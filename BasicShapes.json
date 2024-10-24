@@ -89,6 +89,11 @@
 	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
 	"file":"star.groovy",
 	"order":"17"
+	},
+"icosahedron":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"icosahedron.groovy",
+	"order":"18"
 	}
 	
 	
