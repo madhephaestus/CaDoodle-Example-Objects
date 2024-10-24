@@ -4,7 +4,7 @@ import eu.mihosoft.vrl.v3d.parametrics.StringParameter
 CSG getObject(){
 	if(args==null)
 		args=["Test_key_here"]
-		StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Size","6-inch",["2-inch","3-inch","4-inch","6-inch"])
+		StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Size","6-inch",Vitamins.listVitaminSizes("vexShaft"))
 	def part= Vitamins.get("vexShaft",word.getStrValue()).setIsHole(true)
 	return part.setParameter(word).setRegenerate({getObject()})
 }

@@ -36,25 +36,41 @@ for(String type:Vitamins.listVitaminTypes()) {
 	data.put("order", order++)
 	String name = type+".groovy"
 	data.put("file", name)
-	
+
 	File vitaminGen =  ScriptingEngine.fileFromGit(gitULR, name);
-	String code = 	"import com.neuronrobotics.bowlerstudio.vitamins.Vitamins; \n"+\
+	try {
+		long start = System.currentTimeMillis();
+		if(Vitamins.get(type,mySize)==null) {
+			throw new RuntimeException("Vitamin did not load "+type+" "+mySize)
+		}
+		long currentTimeMillisStart = System.currentTimeMillis()-start
+		if(currentTimeMillisStart>900) {
+			throw new RuntimeException("Vitamin took too long not load "+type+" "+mySize+" "+currentTimeMillisStart);
+			
+		}
+		println "Vitamin took "+type+" "+mySize+" "+currentTimeMillisStart
+		String code = 	"import com.neuronrobotics.bowlerstudio.vitamins.Vitamins; \n"+\
 					"import eu.mihosoft.vrl.v3d.CSG\n"+
-					"import eu.mihosoft.vrl.v3d.parametrics.StringParameter\n"+
-					"CSG getObject(){\n"+
-					"\tif(args==null)\n"+
-						"\t\targs=[\"Test_key_here\"]\n"+\
-					"\t	StringParameter word = new StringParameter(	args[0]+\"_CaDoodle_TextGeneration_Size\",\""+mySize+"\","+Options+")\n"+
-					"\tdef part= Vitamins.get(\""+type+"\",word.getStrValue()).setIsHole(true)\n"+
-					"\treturn part.setParameter(word).setRegenerate({getObject()})\n"+\
+				"import eu.mihosoft.vrl.v3d.parametrics.StringParameter\n"+
+				"CSG getObject(){\n"+
+				"\tif(args==null)\n"+
+				"\t\targs=[\"Test_key_here\"]\n"+\
+					"\t	StringParameter word = new StringParameter(	args[0]+\"_CaDoodle_TextGeneration_Size\",\""+mySize+"\",Vitamins.listVitaminSizes(\""+type+"\"))\n"+
+				"\tdef part= Vitamins.get(\""+type+"\",word.getStrValue()).setIsHole(true)\n"+
+				"\treturn part.setParameter(word).setRegenerate({getObject()})\n"+\
 					"}\n"+
-					"return getObject()\n"
-					
-	Files.writeString(vitaminGen.toPath(), code, StandardOpenOption.CREATE);
-	tmp.put(type, data)
+				"return getObject()\n"
+		vitaminGen.delete();
+		Files.writeString(vitaminGen.toPath(), code, StandardOpenOption.CREATE);
+		tmp.put(type, data)
+	}catch(Throwable t) {
+		t.printStackTrace()
+	}
 }
 
 String contents = gson.toJson(tmp);
 println contents
 println fileFromGit.absolutePath
+fileFromGit.delete();
 Files.writeString(fileFromGit.toPath(), contents, StandardOpenOption.CREATE);
+
