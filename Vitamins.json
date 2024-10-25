@@ -1,242 +1,194 @@
 {
   "conePointSetScrew": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "conePointSetScrew.groovy",
-    "order": 16
+    "file": "conePointSetScrew.groovy"
   },
   "brushlessMotorShaft": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "brushlessMotorShaft.groovy",
-    "order": 12
+    "file": "brushlessMotorShaft.groovy"
   },
   "roundMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "roundMotor.groovy",
-    "order": 30
+    "file": "roundMotor.groovy"
   },
   "heatedThreadedInsert": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "heatedThreadedInsert.groovy",
-    "order": 20
+    "file": "heatedThreadedInsert.groovy"
   },
   "LewanSoulMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "LewanSoulMotor.groovy",
-    "order": 3
+    "file": "LewanSoulMotor.groovy"
   },
   "nut": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "nut.groovy",
-    "order": 27
+    "file": "nut.groovy"
   },
   "capScrew": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "capScrew.groovy",
-    "order": 13
+    "file": "capScrew.groovy"
   },
   "lockNut": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "lockNut.groovy",
-    "order": 25
+    "file": "lockNut.groovy"
   },
   "vexFlatSheet": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexFlatSheet.groovy",
-    "order": 40
+    "file": "vexFlatSheet.groovy"
   },
   "BatteryBox": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "BatteryBox.groovy",
-    "order": 0
+    "file": "BatteryBox.groovy"
   },
   "IndMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "IndMotor.groovy",
-    "order": 1
+    "file": "IndMotor.groovy"
   },
   "stepperMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "stepperMotor.groovy",
-    "order": 35
+    "file": "stepperMotor.groovy"
   },
   "ballBearing": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "ballBearing.groovy",
-    "order": 8
+    "file": "ballBearing.groovy"
   },
   "dShaft": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "dShaft.groovy",
-    "order": 17
+    "file": "dShaft.groovy"
   },
   "joystickCovers": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "joystickCovers.groovy",
-    "order": 23
+    "file": "joystickCovers.groovy"
   },
   "teeNutWithProngs": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "teeNutWithProngs.groovy",
-    "order": 36
+    "file": "teeNutWithProngs.groovy"
   },
   "washer": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "washer.groovy",
-    "order": 49
+    "file": "washer.groovy"
   },
   "timingBelt": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "timingBelt.groovy",
-    "order": 37
+    "file": "timingBelt.groovy"
   },
   "vex_Hex_Nut_Retainer": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vex_Hex_Nut_Retainer.groovy",
-    "order": 48
+    "file": "vex_Hex_Nut_Retainer.groovy"
   },
   "ballChain": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "ballChain.groovy",
-    "order": 9
+    "file": "ballChain.groovy"
   },
   "vexMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexMotor.groovy",
-    "order": 43
+    "file": "vexMotor.groovy"
   },
   "hobbyServoHorn": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "hobbyServoHorn.groovy",
-    "order": 22
+    "file": "hobbyServoHorn.groovy"
   },
   "steelPin": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "steelPin.groovy",
-    "order": 34
+    "file": "steelPin.groovy"
   },
   "chamferedScrew": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "chamferedScrew.groovy",
-    "order": 14
+    "file": "chamferedScrew.groovy"
   },
   "compressionSpring": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "compressionSpring.groovy",
-    "order": 15
+    "file": "compressionSpring.groovy"
   },
   "linearBallBearing": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "linearBallBearing.groovy",
-    "order": 24
+    "file": "linearBallBearing.groovy"
   },
   "VexWireless": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "VexWireless.groovy",
-    "order": 7
+    "file": "VexWireless.groovy"
   },
   "squareNut": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "squareNut.groovy",
-    "order": 33
+    "file": "squareNut.groovy"
   },
   "torsionSpring": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "torsionSpring.groovy",
-    "order": 38
+    "file": "torsionSpring.groovy"
   },
   "PhillipsRoundedHeadThreadFormingScrews": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "PhillipsRoundedHeadThreadFormingScrews.groovy",
-    "order": 4
+    "file": "PhillipsRoundedHeadThreadFormingScrews.groovy"
   },
   "encoder": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "encoder.groovy",
-    "order": 19
+    "file": "encoder.groovy"
   },
   "vexGear": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexGear.groovy",
-    "order": 41
+    "file": "vexGear.groovy"
   },
   "vexStandoff": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexStandoff.groovy",
-    "order": 46
+    "file": "vexStandoff.groovy"
   },
   "vexWheels": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexWheels.groovy",
-    "order": 47
+    "file": "vexWheels.groovy"
   },
   "brushlessMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "brushlessMotor.groovy",
-    "order": 11
+    "file": "brushlessMotor.groovy"
   },
   "omniWheelRoller": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "omniWheelRoller.groovy",
-    "order": 29
+    "file": "omniWheelRoller.groovy"
   },
   "vexSpacer": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexSpacer.groovy",
-    "order": 45
+    "file": "vexSpacer.groovy"
   },
   "hobbyServo": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "hobbyServo.groovy",
-    "order": 21
+    "file": "hobbyServo.groovy"
   },
   "LewanSoulHorn": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "LewanSoulHorn.groovy",
-    "order": 2
+    "file": "LewanSoulHorn.groovy"
   },
   "vexShaft": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexShaft.groovy",
-    "order": 44
+    "file": "vexShaft.groovy"
   },
   "VexBattery": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "VexBattery.groovy",
-    "order": 5
+    "file": "VexBattery.groovy"
   },
   "brushlessBoltOnShaft": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "brushlessBoltOnShaft.groovy",
-    "order": 10
+    "file": "brushlessBoltOnShaft.groovy"
   },
   "domeHeadScrew": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "domeHeadScrew.groovy",
-    "order": 18
+    "file": "domeHeadScrew.groovy"
   },
   "VexBrain": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "VexBrain.groovy",
-    "order": 6
+    "file": "VexBrain.groovy"
   },
   "socket": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "socket.groovy",
-    "order": 32
+    "file": "socket.groovy"
   },
   "vexCchannel": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexCchannel.groovy",
-    "order": 39
+    "file": "vexCchannel.groovy"
   },
   "vexLchannel": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexLchannel.groovy",
-    "order": 42
+    "file": "vexLchannel.groovy"
   },
   "microMetalMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "microMetalMotor.groovy",
-    "order": 26
+    "file": "microMetalMotor.groovy"
   }
 }

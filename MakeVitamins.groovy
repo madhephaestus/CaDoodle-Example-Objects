@@ -16,10 +16,13 @@ HashMap<String, HashMap<String, HashMap<String, String>>> nameToFile = new HashM
 Type TT = new TypeToken<HashMap<String, HashMap<String, String>>>() {
 		}.getType();
 Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
-String f = "Vitamins.json"
-File fileFromGit = ScriptingEngine.fileFromGit(gitULR, f);
 
-HashMap<String, HashMap<String, String>> tmp =  new HashMap<>()
+
+HashMap<String, HashMap<String, String>> allVitamins =  new HashMap<>()
+HashMap<String, HashMap<String, String>> vex =  new HashMap<>()
+HashMap<String, HashMap<String, String>> nutsandbolts =  new HashMap<>()
+HashMap<String, HashMap<String, String>> motors =  new HashMap<>()
+
 int order =0;
 for(String type:Vitamins.listVitaminTypes()) {
 	ArrayList<String> listVitaminSizes = Vitamins.listVitaminSizes(type)
@@ -33,7 +36,7 @@ for(String type:Vitamins.listVitaminTypes()) {
 	Options+="]"
 	HashMap<String,String> data = new HashMap<>();
 	data.put("git", gitULR)
-	data.put("order", order++)
+	//data.put("order", order)
 	String name = type+".groovy"
 	data.put("file", name)
 
@@ -48,6 +51,7 @@ for(String type:Vitamins.listVitaminTypes()) {
 			throw new RuntimeException("Vitamin took too long not load "+type+" "+mySize+" "+currentTimeMillisStart);
 			
 		}
+		//order++;
 		println "Vitamin took "+type+" "+mySize+" "+currentTimeMillisStart
 		String code = 	"import com.neuronrobotics.bowlerstudio.vitamins.Vitamins; \n"+\
 					"import eu.mihosoft.vrl.v3d.CSG\n"+
@@ -62,15 +66,48 @@ for(String type:Vitamins.listVitaminTypes()) {
 				"return getObject()\n"
 		vitaminGen.delete();
 		Files.writeString(vitaminGen.toPath(), code, StandardOpenOption.CREATE);
-		tmp.put(type, data)
+		allVitamins.put(type, data)
+		if(type.toLowerCase().contains("vex")) {
+			vex.put(type, data)
+		}
+		if(type.toLowerCase().contains("nut")||type.toLowerCase().contains("bolt")||type.toLowerCase().contains("screw")) {
+			nutsandbolts.put(type, data)
+		}
+		if(Vitamins.isActuator(type)||Vitamins.isShaft(type)) {
+			motors.put(type, data)
+		}
 	}catch(Throwable t) {
 		t.printStackTrace()
 	}
 }
-
-String contents = gson.toJson(tmp);
+String f = "VEX_Vitamins.json"
+File fileFromGit = ScriptingEngine.fileFromGit(gitULR, f);
+String contents = gson.toJson(vex);
 println contents
 println fileFromGit.absolutePath
 fileFromGit.delete();
 Files.writeString(fileFromGit.toPath(), contents, StandardOpenOption.CREATE);
 
+ f = "Vitamins.json"
+ fileFromGit = ScriptingEngine.fileFromGit(gitULR, f);
+ contents = gson.toJson(allVitamins);
+println contents
+println fileFromGit.absolutePath
+fileFromGit.delete();
+Files.writeString(fileFromGit.toPath(), contents, StandardOpenOption.CREATE);
+
+f = "Fastener_Vitamins.json"
+fileFromGit = ScriptingEngine.fileFromGit(gitULR, f);
+contents = gson.toJson(nutsandbolts);
+println contents
+println fileFromGit.absolutePath
+fileFromGit.delete();
+Files.writeString(fileFromGit.toPath(), contents, StandardOpenOption.CREATE);
+
+f = "Motor_Vitamins.json"
+fileFromGit = ScriptingEngine.fileFromGit(gitULR, f);
+contents = gson.toJson(motors);
+println contents
+println fileFromGit.absolutePath
+fileFromGit.delete();
+Files.writeString(fileFromGit.toPath(), contents, StandardOpenOption.CREATE);

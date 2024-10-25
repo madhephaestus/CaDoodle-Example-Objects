@@ -1,0 +1,46 @@
+{
+  "chamferedScrew": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "chamferedScrew.groovy"
+  },
+  "teeNutWithProngs": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "teeNutWithProngs.groovy"
+  },
+  "vex_Hex_Nut_Retainer": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "vex_Hex_Nut_Retainer.groovy"
+  },
+  "brushlessBoltOnShaft": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "brushlessBoltOnShaft.groovy"
+  },
+  "conePointSetScrew": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "conePointSetScrew.groovy"
+  },
+  "domeHeadScrew": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "domeHeadScrew.groovy"
+  },
+  "squareNut": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "squareNut.groovy"
+  },
+  "PhillipsRoundedHeadThreadFormingScrews": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "PhillipsRoundedHeadThreadFormingScrews.groovy"
+  },
+  "nut": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "nut.groovy"
+  },
+  "capScrew": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "capScrew.groovy"
+  },
+  "lockNut": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "lockNut.groovy"
+  }
+}
