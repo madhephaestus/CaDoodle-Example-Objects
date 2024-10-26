@@ -22,7 +22,7 @@ CSG getObject(){
 	LengthParameter top = new LengthParameter(	args[0]+"_CaDoodle_StarTop_Outer",
 	20,[])
 	LengthParameter bottom = new LengthParameter(	args[0]+"_CaDoodle_StarBottom_Inner",
-	0.5,[0.0,0.25,0.5,0.75,0.9,1.0])
+	0.5,[0.1,0.25,0.5,0.75,0.9,1.0])
 	int getMM = (int)word.getMM()
 	int numberOfPoints = getMM;
 	double angle = 360.0/numberOfPoints;
