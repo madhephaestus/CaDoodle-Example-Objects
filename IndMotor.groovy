@@ -1,11 +1,15 @@
 import com.neuronrobotics.bowlerstudio.vitamins.Vitamins; 
 import eu.mihosoft.vrl.v3d.CSG
 import eu.mihosoft.vrl.v3d.parametrics.StringParameter
+import eu.mihosoft.vrl.v3d.parametrics.CSGDatabase;
 CSG getObject(){
 	if(args==null)
 		args=["Test_key_here"]
-		StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Size","sn",Vitamins.listVitaminSizes("IndMotor"))
+	StringParameter size = new StringParameter(	"IndMotor"+" Default","",Vitamins.listVitaminSizes("IndMotor"))	
+	StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Size",size.getStrValue(),Vitamins.listVitaminSizes("IndMotor"))
+	size.setStrValue(word.getStrValue())
 	def part= Vitamins.get("IndMotor",word.getStrValue()).setIsHole(true)
+	CSGDatabase.saveDatabase() 
 	return part.setParameter(word).setRegenerate({getObject()})
 }
 return getObject()

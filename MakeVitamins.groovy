@@ -1,3 +1,5 @@
+import eu.mihosoft.vrl.v3d.parametrics.CSGDatabase
+
 import eu.mihosoft.vrl.v3d.CSG
 
 import java.lang.reflect.Type
@@ -56,11 +58,15 @@ for(String type:Vitamins.listVitaminTypes()) {
 		String code = 	"import com.neuronrobotics.bowlerstudio.vitamins.Vitamins; \n"+\
 					"import eu.mihosoft.vrl.v3d.CSG\n"+
 				"import eu.mihosoft.vrl.v3d.parametrics.StringParameter\n"+
+				"import eu.mihosoft.vrl.v3d.parametrics.CSGDatabase;\n"+
 				"CSG getObject(){\n"+
 				"\tif(args==null)\n"+
-				"\t\targs=[\"Test_key_here\"]\n"+\
-					"\t	StringParameter word = new StringParameter(	args[0]+\"_CaDoodle_TextGeneration_Size\",\""+mySize+"\",Vitamins.listVitaminSizes(\""+type+"\"))\n"+
+					"\t\targs=[\"Test_key_here\"]\n"+\
+				"\tStringParameter size = new StringParameter(	\""+type+"\"+\" Default\",\"\",Vitamins.listVitaminSizes(\""+type+"\"))	\n"+
+				"\tStringParameter word = new StringParameter(	args[0]+\"_CaDoodle_TextGeneration_Size\",size.getStrValue(),Vitamins.listVitaminSizes(\""+type+"\"))\n"+
+				"\tsize.setStrValue(word.getStrValue())\n"+
 				"\tdef part= Vitamins.get(\""+type+"\",word.getStrValue()).setIsHole(true)\n"+
+				"\tCSGDatabase.saveDatabase() \n"+
 				"\treturn part.setParameter(word).setRegenerate({getObject()})\n"+\
 					"}\n"+
 				"return getObject()\n"
