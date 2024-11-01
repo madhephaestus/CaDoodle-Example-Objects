@@ -4,6 +4,11 @@
 	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
 	"file":"OpenHardwareLogo.groovy",
 	"order":"0"
+	},
+	"Open-Source Logo":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"OpenSourceLogo.groovy",
+	"order":"1"
 	}
 	
 }
