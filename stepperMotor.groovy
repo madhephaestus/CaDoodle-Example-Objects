@@ -6,7 +6,7 @@ CSG getObject(){
 	if(args==null)
 		args=["Test_key_here"]
 	StringParameter size = new StringParameter(	"stepperMotor"+" Default","Pololu35x26",Vitamins.listVitaminSizes("stepperMotor"))	
-	if(size.getStrValue().length==0)
+	if(size.getStrValue().length()==0)
 		size.setStrValue("Pololu35x26")
 	StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Size",size.getStrValue(),Vitamins.listVitaminSizes("stepperMotor"))
 	size.setStrValue(word.getStrValue())
