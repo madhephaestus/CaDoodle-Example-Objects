@@ -7,6 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="GROOVY_DSL_SUPPORT"/>
-	<classpathentry kind="lib" path="/Users/kharrington/bin/BowlerStudioInstall/2.42.7/BowlerStudio.jar"/>
+	<classpathentry kind="lib" path="/home/hephaestus/bin/BowlerStudioInstall/latest/BowlerStudio.jar" sourcepath="/JavaCad"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
