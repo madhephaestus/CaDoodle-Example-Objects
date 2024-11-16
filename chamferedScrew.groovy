@@ -5,7 +5,9 @@ import eu.mihosoft.vrl.v3d.parametrics.CSGDatabase;
 CSG getObject(){
 	if(args==null)
 		args=["Test_key_here"]
-	StringParameter size = new StringParameter(	"chamferedScrew"+" Default","",Vitamins.listVitaminSizes("chamferedScrew"))	
+	StringParameter size = new StringParameter(	"chamferedScrew"+" Default","M3x16",Vitamins.listVitaminSizes("chamferedScrew"))	
+	if(size.getStrValue().length()==0)
+		size.setStrValue("M3x16")
 	StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Size",size.getStrValue(),Vitamins.listVitaminSizes("chamferedScrew"))
 	size.setStrValue(word.getStrValue())
 	def part= Vitamins.get("chamferedScrew",word.getStrValue()).setIsHole(true)

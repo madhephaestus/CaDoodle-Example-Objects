@@ -5,7 +5,9 @@ import eu.mihosoft.vrl.v3d.parametrics.CSGDatabase;
 CSG getObject(){
 	if(args==null)
 		args=["Test_key_here"]
-	StringParameter size = new StringParameter(	"timingBelt"+" Default","",Vitamins.listVitaminSizes("timingBelt"))	
+	StringParameter size = new StringParameter(	"timingBelt"+" Default","XL",Vitamins.listVitaminSizes("timingBelt"))	
+	if(size.getStrValue().length()==0)
+		size.setStrValue("XL")
 	StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Size",size.getStrValue(),Vitamins.listVitaminSizes("timingBelt"))
 	size.setStrValue(word.getStrValue())
 	def part= Vitamins.get("timingBelt",word.getStrValue()).setIsHole(true)

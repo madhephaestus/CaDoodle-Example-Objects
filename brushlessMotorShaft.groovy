@@ -5,7 +5,9 @@ import eu.mihosoft.vrl.v3d.parametrics.CSGDatabase;
 CSG getObject(){
 	if(args==null)
 		args=["Test_key_here"]
-	StringParameter size = new StringParameter(	"brushlessMotorShaft"+" Default","",Vitamins.listVitaminSizes("brushlessMotorShaft"))	
+	StringParameter size = new StringParameter(	"brushlessMotorShaft"+" Default","TL2955",Vitamins.listVitaminSizes("brushlessMotorShaft"))	
+	if(size.getStrValue().length()==0)
+		size.setStrValue("TL2955")
 	StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Size",size.getStrValue(),Vitamins.listVitaminSizes("brushlessMotorShaft"))
 	size.setStrValue(word.getStrValue())
 	def part= Vitamins.get("brushlessMotorShaft",word.getStrValue()).setIsHole(true)

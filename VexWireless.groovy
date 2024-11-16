@@ -5,7 +5,9 @@ import eu.mihosoft.vrl.v3d.parametrics.CSGDatabase;
 CSG getObject(){
 	if(args==null)
 		args=["Test_key_here"]
-	StringParameter size = new StringParameter(	"VexWireless"+" Default","",Vitamins.listVitaminSizes("VexWireless"))	
+	StringParameter size = new StringParameter(	"VexWireless"+" Default","v5_Vexnet",Vitamins.listVitaminSizes("VexWireless"))	
+	if(size.getStrValue().length()==0)
+		size.setStrValue("v5_Vexnet")
 	StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Size",size.getStrValue(),Vitamins.listVitaminSizes("VexWireless"))
 	size.setStrValue(word.getStrValue())
 	def part= Vitamins.get("VexWireless",word.getStrValue()).setIsHole(true)

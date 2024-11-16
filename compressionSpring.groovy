@@ -5,7 +5,9 @@ import eu.mihosoft.vrl.v3d.parametrics.CSGDatabase;
 CSG getObject(){
 	if(args==null)
 		args=["Test_key_here"]
-	StringParameter size = new StringParameter(	"compressionSpring"+" Default","",Vitamins.listVitaminSizes("compressionSpring"))	
+	StringParameter size = new StringParameter(	"compressionSpring"+" Default","GhostSpring",Vitamins.listVitaminSizes("compressionSpring"))	
+	if(size.getStrValue().length()==0)
+		size.setStrValue("GhostSpring")
 	StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Size",size.getStrValue(),Vitamins.listVitaminSizes("compressionSpring"))
 	size.setStrValue(word.getStrValue())
 	def part= Vitamins.get("compressionSpring",word.getStrValue()).setIsHole(true)

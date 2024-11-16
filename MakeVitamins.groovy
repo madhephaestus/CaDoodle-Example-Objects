@@ -62,7 +62,8 @@ for(String type:Vitamins.listVitaminTypes()) {
 				"CSG getObject(){\n"+
 				"\tif(args==null)\n"+
 					"\t\targs=[\"Test_key_here\"]\n"+\
-				"\tStringParameter size = new StringParameter(	\""+type+"\"+\" Default\",\"\",Vitamins.listVitaminSizes(\""+type+"\"))	\n"+
+				"\tStringParameter size = new StringParameter(	\""+type+"\"+\" Default\",\""+mySize+"\",Vitamins.listVitaminSizes(\""+type+"\"))	\n"+
+				"\tif(size.getStrValue().length()==0)\n\t\tsize.setStrValue(\""+mySize+"\")\n"+
 				"\tStringParameter word = new StringParameter(	args[0]+\"_CaDoodle_TextGeneration_Size\",size.getStrValue(),Vitamins.listVitaminSizes(\""+type+"\"))\n"+
 				"\tsize.setStrValue(word.getStrValue())\n"+
 				"\tdef part= Vitamins.get(\""+type+"\",word.getStrValue()).setIsHole(true)\n"+
