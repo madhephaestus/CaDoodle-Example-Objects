@@ -42,7 +42,7 @@ CSG getObject(){
 	
 	ArrayList<String> option=new ArrayList<>()
 	option.addAll(fontOptions)
-	option.add("Arial")
+	option.add("System Regular")
 	StringParameter font = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Font",
 		option.get(option.size()-1),option)
 	CSG text = CSG.text(word.getStrValue() ,  10,  20, font.getStrValue())
