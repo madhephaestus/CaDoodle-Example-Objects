@@ -14,7 +14,7 @@ CSG getObject(){
 	ArrayList<Double> options = new  ArrayList<Double> ()
 	options.addAll(Arrays.asList(0,1,2,3,4,5,6,7,8,9,10))
 	LengthParameter divx = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_DivX",0,options)
-	LengthParameter divy = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_DivY",0,options)
+	LengthParameter divy = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_DivY",1,options)
 	LengthParameter x = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_X",1,options)
 	LengthParameter y = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_Y",1,options)
 	LengthParameter z = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_Z",6,options)
