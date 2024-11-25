@@ -13,34 +13,29 @@ CSG getObject(){
 	}
 	ArrayList<Double> options = new  ArrayList<Double> ()
 	options.addAll(Arrays.asList(0,1,2,3,4,5,6,7,8,9,10))
-	LengthParameter divx = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_DivX",0,options)
-	LengthParameter divy = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_DivY",0,options)
 	LengthParameter x = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_X",1,options)
 	LengthParameter y = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_Y",1,options)
-	LengthParameter z = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_Z",6,options)
 	LengthParameter mag = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_Magnets",0,[0,1])
+	LengthParameter style_plate = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_Style",3,[1,2,3,4])
 	
+	if(style_plate.getMM()<1)
+		style_plate.setMM(1);
 	HashMap<String,Object> params=new HashMap<String, Object>();
 	params.put("gridx", x.getMM())
 	params.put("gridy", y.getMM())
-	params.put("divx", divx.getMM())
-	params.put("divy", divy.getMM())
-	params.put("gridz", z.getMM())
-	params.put("magnet_holes", mag.getMM()>0)
-	params.put("refined_holes", !(mag.getMM()>0))
+	params.put("enable_magnet", mag.getMM()>0)
+	params.put("style_plate", (int)style_plate.getMM())
 	
 	CSG bin=	ScriptingEngine.gitScriptRun(
 			"https://github.com/kennetek/gridfinity-rebuilt-openscad.git",
-			"gridfinity-rebuilt-bins.scad",[params])
+			"gridfinity-rebuilt-baseplate.scad",[params])
 	
 	CSGDatabase.saveDatabase()
 	return bin
-	.setParameter(divy)
-	.setParameter(divx)
+	.setParameter(mag)
 	.setParameter(y)
 	.setParameter(x)
-	.setParameter(z)
-	.setParameter(mag)
+	.setParameter(style_plate)
 	.setRegenerate({getObject()})
 }
 return getObject()

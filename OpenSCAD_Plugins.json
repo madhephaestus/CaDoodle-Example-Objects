@@ -4,6 +4,10 @@
 	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
 	"file":"openscad/gridfinityBin.groovy",
 	"order":"0"
+	},
+	"Gridfinity Base Plate":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"openscad/gridfinityBase.groovy",
+	"order":"1"
 	}
-	
 }
