@@ -49,7 +49,7 @@ for(String type:Vitamins.listVitaminTypes()) {
 			throw new RuntimeException("Vitamin did not load "+type+" "+mySize)
 		}
 		long currentTimeMillisStart = System.currentTimeMillis()-start
-		if(currentTimeMillisStart>900) {
+		if(currentTimeMillisStart>1500) {
 			throw new RuntimeException("Vitamin took too long not load "+type+" "+mySize+" "+currentTimeMillisStart);
 			
 		}

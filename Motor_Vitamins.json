@@ -35,6 +35,10 @@
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
     "file": "IndMotor.groovy"
   },
+  "stepperMotor": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "stepperMotor.groovy"
+  },
   "ballBearing": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
     "file": "ballBearing.groovy"
