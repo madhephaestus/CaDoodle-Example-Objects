@@ -59,6 +59,7 @@ for(String type:Vitamins.listVitaminTypes()) {
 					"import eu.mihosoft.vrl.v3d.CSG\n"+
 				"import eu.mihosoft.vrl.v3d.parametrics.StringParameter\n"+
 				"import eu.mihosoft.vrl.v3d.parametrics.CSGDatabase;\n"+
+				"import com.neuronrobotics.bowlerstudio.scripting.cadoodle.CaDoodleFile;\n"+
 				"CSG getObject(){\n"+
 				"\tif(args==null)\n"+
 					"\t\targs=[\"Test_key_here\"]\n"+\
@@ -66,6 +67,9 @@ for(String type:Vitamins.listVitaminTypes()) {
 				"\tif(size.getStrValue().length()==0)\n\t\tsize.setStrValue(\""+mySize+"\")\n"+
 				"\tStringParameter word = new StringParameter(	args[0]+\"_CaDoodle_TextGeneration_Size\",size.getStrValue(),Vitamins.listVitaminSizes(\""+type+"\"))\n"+
 				"\tsize.setStrValue(word.getStrValue())\n"+
+				"	if(args.size()>1)if(!args[1].get(\"PreventBomAdd\"))\n"+
+				 "\t\tCaDoodleFile.getBoM().addVitamin(new VitaminLocation(false,\targs[0], \"" + type +
+				"\" , word.getStrValue(), new TransformNR()),true) \n"+
 				"\tdef part= Vitamins.get(\""+type+"\",word.getStrValue()).setIsHole(true)\n"+
 				"\tCSGDatabase.saveDatabase() \n"+
 				"\treturn part.setParameter(word).setRegenerate({getObject()})\n"+\
