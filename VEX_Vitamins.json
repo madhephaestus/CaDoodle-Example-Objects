@@ -1,54 +1,54 @@
 {
   "VexWireless": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "VexWireless.groovy"
+    "file": "generated/VexWireless.groovy"
   },
   "vexFlatSheet": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexFlatSheet.groovy"
+    "file": "generated/vexFlatSheet.groovy"
   },
   "vexGear": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexGear.groovy"
+    "file": "generated/vexGear.groovy"
   },
   "vexStandoff": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexStandoff.groovy"
+    "file": "generated/vexStandoff.groovy"
   },
   "vexWheels": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexWheels.groovy"
+    "file": "generated/vexWheels.groovy"
   },
   "vexSpacer": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexSpacer.groovy"
+    "file": "generated/vexSpacer.groovy"
   },
   "vex_Hex_Nut_Retainer": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vex_Hex_Nut_Retainer.groovy"
+    "file": "generated/vex_Hex_Nut_Retainer.groovy"
   },
   "vexShaft": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexShaft.groovy"
+    "file": "generated/vexShaft.groovy"
   },
   "VexBattery": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "VexBattery.groovy"
+    "file": "generated/VexBattery.groovy"
   },
   "VexBrain": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "VexBrain.groovy"
+    "file": "generated/VexBrain.groovy"
   },
   "vexMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexMotor.groovy"
+    "file": "generated/vexMotor.groovy"
   },
   "vexCchannel": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexCchannel.groovy"
+    "file": "generated/vexCchannel.groovy"
   },
   "vexLchannel": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexLchannel.groovy"
+    "file": "generated/vexLchannel.groovy"
   }
 }
