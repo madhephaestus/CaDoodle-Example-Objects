@@ -1,90 +1,90 @@
 {
   "chamferedScrew": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "chamferedScrew.groovy"
+    "file": "generated/chamferedScrew.groovy"
   },
   "conePointSetScrew": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "conePointSetScrew.groovy"
+    "file": "generated/conePointSetScrew.groovy"
   },
   "squareNut": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "squareNut.groovy"
+    "file": "generated/squareNut.groovy"
   },
   "brushlessMotorShaft": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "brushlessMotorShaft.groovy"
+    "file": "generated/brushlessMotorShaft.groovy"
   },
   "roundMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "roundMotor.groovy"
+    "file": "generated/roundMotor.groovy"
   },
   "PhillipsRoundedHeadThreadFormingScrews": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "PhillipsRoundedHeadThreadFormingScrews.groovy"
+    "file": "generated/PhillipsRoundedHeadThreadFormingScrews.groovy"
   },
   "LewanSoulMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "LewanSoulMotor.groovy"
+    "file": "generated/LewanSoulMotor.groovy"
   },
   "capScrew": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "capScrew.groovy"
+    "file": "generated/capScrew.groovy"
   },
   "IndMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "IndMotor.groovy"
+    "file": "generated/IndMotor.groovy"
   },
   "stepperMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "stepperMotor.groovy"
+    "file": "generated/stepperMotor.groovy"
   },
   "ballBearing": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "ballBearing.groovy"
+    "file": "generated/ballBearing.groovy"
   },
   "dShaft": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "dShaft.groovy"
+    "file": "generated/dShaft.groovy"
   },
   "brushlessMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "brushlessMotor.groovy"
+    "file": "generated/brushlessMotor.groovy"
   },
   "omniWheelRoller": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "omniWheelRoller.groovy"
+    "file": "generated/omniWheelRoller.groovy"
   },
   "hobbyServo": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "hobbyServo.groovy"
+    "file": "generated/hobbyServo.groovy"
   },
   "LewanSoulHorn": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "LewanSoulHorn.groovy"
+    "file": "generated/LewanSoulHorn.groovy"
   },
   "vexShaft": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexShaft.groovy"
+    "file": "generated/vexShaft.groovy"
   },
   "brushlessBoltOnShaft": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "brushlessBoltOnShaft.groovy"
+    "file": "generated/brushlessBoltOnShaft.groovy"
   },
   "vexMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "vexMotor.groovy"
+    "file": "generated/vexMotor.groovy"
   },
   "microMetalMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "microMetalMotor.groovy"
+    "file": "generated/microMetalMotor.groovy"
   },
   "hobbyServoHorn": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "hobbyServoHorn.groovy"
+    "file": "generated/hobbyServoHorn.groovy"
   },
   "steelPin": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
-    "file": "steelPin.groovy"
+    "file": "generated/steelPin.groovy"
   }
 }
