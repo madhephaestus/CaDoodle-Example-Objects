@@ -11,6 +11,10 @@ CSG getObject(){
 	options.addAll(Arrays.asList(3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,64))
 	LengthParameter word = new LengthParameter(	args[0]+"_CaDoodle_CylinderGeneration_Sides",
 										16,options)
+	LengthParameter diam = new LengthParameter(	args[0]+"_CaDoodle_CylinderGeneration_Diameter",
+		20,options)
+	LengthParameter height = new LengthParameter(	args[0]+"_CaDoodle_CylinderGeneration_Height",
+		20,options)
 	ArrayList<Object> radOpts = []
 	for(int i=0;i<10;i++) {
 		radOpts.add(i)
@@ -22,14 +26,16 @@ CSG getObject(){
 	
 	int sides = (int)word.getMM()
 	CSG local = null
+	double radius = diam.getMM()
+	double h=height.getMM()
 	if(rad.getMM()>0) {
-		local=new RoundedCylinder(10,10,20,sides).cornerRadius(rad.getMM()).toCSG()
+		local=new RoundedCylinder(radius,radius,h,sides).cornerRadius(rad.getMM()).toCSG()
 		chamfer.setMM(0)
 	}else if (chamfer.getMM()>0) {
-		local=new ChamferedCylinder(10,20,chamfer.getMM()).toCSG()
+		local=new ChamferedCylinder(radius,h,chamfer.getMM()).toCSG()
 		rad.setMM(0);
 	}else {
-		local= new Cylinder(10,10,20,sides).toCSG()
+		local= new Cylinder(radius,radius,h,sides).toCSG()
 	}
 	CSG text =  local.toZMin().setColor(Color.ORANGE)
 	CSGDatabase.saveDatabase();
@@ -37,6 +43,8 @@ CSG getObject(){
 		.setParameter(word)
 		.setParameter(rad)
 		.setParameter(chamfer)
+		.setParameter(diam)
+		.setParameter(height)
 		.setRegenerate({getObject()})
 }
 return getObject()
