@@ -26,7 +26,7 @@ CSG getObject(){
 	
 	int sides = (int)word.getMM()
 	CSG local = null
-	double radius = diam.getMM()
+	double radius = diam.getMM()/2
 	double h=height.getMM()
 	if(rad.getMM()>0) {
 		local=new RoundedCylinder(radius,radius,h,sides).cornerRadius(rad.getMM()).toCSG()
