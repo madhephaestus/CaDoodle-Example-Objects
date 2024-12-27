@@ -104,6 +104,12 @@
 	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
 	"file":"diamond.groovy",
 	"order":"20"
+	},
+"Scribble":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"scribble.svg",
+	"order":"21",
+	"copyFile":true
 	}
 	
 	
