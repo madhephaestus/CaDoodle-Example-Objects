@@ -51,7 +51,7 @@ CSG getObject(){
 				.rotz(-90)
 				.moveToCenterX()
 				.moveToCenterY()
-				.setColor(Color.RED)
+				.setColor(Color.PINK)
 	return text
 		.setParameter(word)
 		.setParameter(font)
