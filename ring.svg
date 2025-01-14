@@ -5,7 +5,7 @@
    id="svg2"
    width="28.222222912098783mm"
    height="28.222222912098783mm"
-   sodipodi:docname="ring.SVG.svg"
+   sodipodi:docname="ring.svg"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -27,8 +27,8 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="1.9645534"
-     inkscape:cx="31.304824"
-     inkscape:cy="67.954375"
+     inkscape:cx="31.304825"
+     inkscape:cy="67.954376"
      inkscape:window-width="1433"
      inkscape:window-height="938"
      inkscape:window-x="0"
@@ -40,9 +40,8 @@
      id="layer1">
     <path
        id="path967"
-       style="fill:none;stroke:#f70a0a;stroke-width:1.00157"
-       d="m 87.873047,19.029297 c -9.59934,0.0019 -17.595497,20.431272 -17.595602,43.998079 1.06e-4,23.566807 7.996262,41.347634 17.595602,41.349574 9.600103,7.1e-4 17.382703,-19.105145 17.382813,-42.673825 -1.1e-4,-23.568681 -7.78271,-42.674536 -17.382813,-42.673828 z"
-       transform="scale(0.93749996)"
-       sodipodi:nodetypes="ccccc" />
+       style="fill:none;stroke:#f70a0a;stroke-width:0.961094"
+       d="M 83.546875 19.009766 C 73.438245 19.011472 65.017689 36.8752 65.017578 57.482422 C 65.017628 66.698398 66.704596 74.896236 69.470703 81.150391 L 64.537109 81.150391 L 64.537109 105.83398 L 102.33398 105.83398 L 102.33398 81.150391 L 97.208984 81.150391 C 100.09555 74.554208 101.85346 65.859253 101.85352 56.324219 C 101.8534 35.715358 93.656308 19.009147 83.546875 19.009766 z "
+       transform="scale(0.93749996)" />
   </g>
 </svg>
