@@ -14,7 +14,7 @@ CSG getObject(){
 		args=["Test_key_here"]
 	}
 	ArrayList<Double> options = new  ArrayList<Double> ()
-	options.addAll(Arrays.asList(0,1,2,3,4,5,6,7,8,9,10))
+	options.addAll(Arrays.asList(0,1,2,3,4,5))
 	LengthParameter x = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_X",1,options)
 	LengthParameter y = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_Y",1,options)
 	LengthParameter mag = new LengthParameter(	args[0]+"_CaDoodle_gridfinity_Magnets",0,[0,1])
