@@ -12,7 +12,7 @@ double computeGearPitch(double diameterAtCrown,double numberOfTeeth){
 	return ((diameterAtCrown/2)*((360.0)/numberOfTeeth)*Math.PI/180)
 }
 def getObject(){
-	ArrayList<Number> angles = new ArrayList()<>();
+	ArrayList<Number> angles = new ArrayList<>();
 	for(int i=0;i<90;i++) {
 		angles.add(i);
 	}
