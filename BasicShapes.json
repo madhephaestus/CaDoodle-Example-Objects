@@ -116,7 +116,14 @@
 	"file":"ring.svg",
 	"order":"22",
 	"sweep":true
-	}
-	
+	},
+"Threads":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"threads.svg",
+	"order":"23",
+	"sweep":true,
+	"ZPer":"1.0",
+	"Degrees":"3600"
+	}	
 	
 }
