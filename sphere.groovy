@@ -14,7 +14,7 @@ CSG getObject(){
 	LengthParameter word = new LengthParameter(	args[0]+"_CaDoodle_ShereGeneration_Sides",
 										8,options)
 
-	CSG text = new Sphere(10,(int)(word.getMM()*2),(int)word.getMM()).toCSG().toZMin().setColor(Color.LIGHTBLUE)
+	CSG text = new Sphere(10,(int)(word.getMM()*2),(int)word.getMM()).toCSG().rotx(90).toZMin().setColor(Color.LIGHTBLUE)
 	CSGDatabase.saveDatabase();
 	return text
 		.setParameter(word)
