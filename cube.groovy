@@ -10,6 +10,8 @@ CSG getObject(){
 		args=["Test_key_here"]
 	ArrayList<Double> options = new  ArrayList<Double> ()
 	options.addAll(Arrays.asList(1,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,100))
+	ArrayList<Double> optionsSides = new  ArrayList<Double> ()
+	optionsSides.addAll(Arrays.asList(6,7,8,9,10,11,12,13,14,15,16,17,18,19,32))
 	LengthParameter x = new LengthParameter(	args[0]+"_CaDoodle_CubeGeneration_Y",
 			20,options)
 	LengthParameter y = new LengthParameter(	args[0]+"_CaDoodle_CubeGeneration_X",
@@ -24,6 +26,8 @@ CSG getObject(){
 			0,radOpts)
 	LengthParameter chamfer = new LengthParameter(	args[0]+"_CaDoodle_CubeGeneration_Chamfer",
 			0,radOpts)
+	LengthParameter sides = new LengthParameter(	args[0]+"_CaDoodle_CubeGeneration_Sides",
+		8,optionsSides)
 	CSG local = null
 	try {
 		if(rad.getMM()>0.01) {
@@ -33,7 +37,9 @@ CSG getObject(){
 				x.setMM(rad.getMM()*2+0.1)
 			if(y.getMM()<=rad.getMM()*2)
 				y.setMM(rad.getMM()*2+0.1)
-			local=new RoundedCube(x,y,z).cornerRadius(rad.getMM()).toCSG()
+			RoundedCube cornerRadius = new RoundedCube(x,y,z).cornerRadius(rad.getMM())
+			cornerRadius.setResolution((int)sides.getMM())
+			local=cornerRadius.toCSG()
 			chamfer.setMM(0)
 		}else if (chamfer.getMM()>0.01) {
 			if(z.getMM()<=chamfer.getMM()*2)
@@ -65,6 +71,7 @@ CSG getObject(){
 	return cube
 			.setParameter(rad)
 			.setParameter(chamfer)
+			.setParameter(sides)
 			.setRegenerate({getObject()})
 }
 return getObject()
