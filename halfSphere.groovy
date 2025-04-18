@@ -14,7 +14,10 @@ CSG getObject(){
 	LengthParameter word = new LengthParameter(	args[0]+"_CaDoodle_ShereGeneration_Sides",
 										16,options)
 
-	CSG toCSG = new Sphere(10,(int)(word.getMM()),(int)(word.getMM()/2)).toCSG().rotx(90)
+	int getMM2 = (int)(word.getMM()/2)
+	if(getMM2<2)getMM2=2
+	
+	CSG toCSG = new Sphere(10,(int)(word.getMM()),getMM2).toCSG().rotx(90)
 	toCSG=toCSG.intersect(toCSG.getBoundingBox().toZMin())
 	CSG text = toCSG.toZMin().setColor(Color.PINK)
 	CSGDatabase.saveDatabase();
