@@ -26,7 +26,7 @@ def getObject(){
 	LengthParameter angle = new LengthParameter(	args[0]+"_CaDoodle_Angle",90,angles)
 	
 	// call a script from another library
-	def bevelGears = ScriptingEngine.gitScriptRun(
+	List bevelGears = ScriptingEngine.gitScriptRun(
 	"https://github.com/madhephaestus/GearGenerator.git", // git location of the library
 	"bevelGear.groovy" , // file to load	
 	// Parameters passed to the funcetion
@@ -58,6 +58,7 @@ def getObject(){
 	ArrayList<CSG> back = [agear,bgear];
 	
 	agear.setColor(Color.SILVER)
+	bgear.setColor(Color.GREY)
 	for(CSG c:back) {
 		c.setParameter(ateeth)
 		.setParameter(bteeth)
