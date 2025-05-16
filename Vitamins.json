@@ -186,5 +186,9 @@
   "microMetalMotor": {
     "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
     "file": "generated/microMetalMotor.groovy"
+  },
+  "ElecFreak Shaft": {
+    "git": "https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+    "file": "generated/ElecFreakShaft.groovy"
   }
 }
