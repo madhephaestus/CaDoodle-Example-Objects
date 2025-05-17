@@ -124,6 +124,15 @@
 	"sweep":true,
 	"ZPer":"1.0",
 	"Degrees":"3600"
+	},
+"Spiral":{
+	"git":"https://github.com/madhephaestus/CaDoodle-Example-Objects.git",
+	"file":"spiral.svg",
+	"order":"24",
+	"sweep":true,
+	"ZPer":"15.0",
+	"Spiral":"25",
+	"Degrees":"720"
 	}	
 	
 }
