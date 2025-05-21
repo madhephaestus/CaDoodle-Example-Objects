@@ -130,9 +130,9 @@
 	"file":"spiral.svg",
 	"order":"24",
 	"sweep":true,
-	"ZPer":"15.0",
+	"ZPer":"-15.0",
 	"Spiral":"25",
-	"Degrees":"720"
+	"Degrees":"540"
 	}	
 	
 }
