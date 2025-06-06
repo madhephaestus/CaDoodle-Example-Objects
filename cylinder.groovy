@@ -32,7 +32,7 @@ CSG getObject(){
 		local=new RoundedCylinder(radius,radius,h,sides).cornerRadius(rad.getMM()).toCSG()
 		chamfer.setMM(0)
 	}else if (chamfer.getMM()>0) {
-		local=new ChamferedCylinder(radius,h,chamfer.getMM()).toCSG()
+		local=new ChamferedCylinder(radius,h,chamfer.getMM(),sides).toCSG()
 		rad.setMM(0);
 	}else {
 		local= new Cylinder(radius,radius,h,sides).toCSG()
