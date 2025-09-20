@@ -14,7 +14,8 @@ CSG getObject(){
 	ArrayList<Double> options = new  ArrayList<Double> ()
 	options.addAll(Arrays.asList(2,4,6,8,10,12,14,16,18,64))
 	LengthParameter word = new LengthParameter(	args[0]+"_CaDoodle_CylinderGeneration_Sides",
-										16,options)
+											Integer.parseInt(com.neuronrobotics.bowlerstudio.assets.ConfigurationDatabase.get("CaDoodle", "DefaultNumberOfSides", "16").toString())
+,options)
 
 	int getMM = ((int)word.getMM())*2
 	CSG toCSGToZMin = new Cylinder(10,10,20,getMM).toCSG().toZMin()

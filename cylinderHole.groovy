@@ -1,3 +1,5 @@
+import com.neuronrobotics.bowlerstudio.assets.ConfigurationDatabase
+
 import eu.mihosoft.vrl.v3d.*
 import eu.mihosoft.vrl.v3d.CSG
 import eu.mihosoft.vrl.v3d.Cube
@@ -10,7 +12,8 @@ CSG getObject(){
 	ArrayList<Double> options = new  ArrayList<Double> ()
 	options.addAll(Arrays.asList(3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,64))
 	LengthParameter word = new LengthParameter(	args[0]+"_CaDoodle_CylinderGeneration_Sides",
-										16,options)
+											Integer.parseInt(com.neuronrobotics.bowlerstudio.assets.ConfigurationDatabase.get("CaDoodle", "DefaultNumberOfSides", "16").toString())
+,options)
 	LengthParameter diam = new LengthParameter(	args[0]+"_CaDoodle_CylinderGeneration_Diameter",
 		20,options)
 	LengthParameter height = new LengthParameter(	args[0]+"_CaDoodle_CylinderGeneration_Height",
