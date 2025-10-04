@@ -17,11 +17,11 @@ CSG getObject(){
 		args=["Test_key_here"]
 	ArrayList<Double> options = new  ArrayList<Double> ()
 	options.addAll(Arrays.asList(3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20))
-	LengthParameter word = new LengthParameter(	args[0]+"_CaDoodle_StarSide_Points",
+	LengthParameter word = new LengthParameter(csgdb,	args[0]+"_CaDoodle_StarSide_Points",
 	6,options)
-	LengthParameter top = new LengthParameter(	args[0]+"_CaDoodle_StarTop_Outer",
+	LengthParameter top = new LengthParameter(csgdb,	args[0]+"_CaDoodle_StarTop_Outer",
 	20,[])
-	LengthParameter bottom = new LengthParameter(	args[0]+"_CaDoodle_StarBottom_Inner",
+	LengthParameter bottom = new LengthParameter(csgdb,	args[0]+"_CaDoodle_StarBottom_Inner",
 	0.5,[0.1,0.25,0.5,0.75,0.9,1.0])
 	int getMM = (int)word.getMM()
 	int numberOfPoints = getMM;
@@ -41,11 +41,11 @@ CSG getObject(){
 		parts.add( HullUtil.hull(points).rotz(i))
 	}
 	CSG star = CSG.unionAll(parts)
- 	CSGDatabase.saveDatabase();
+ 	csgdb.saveDatabase();
 	return star
-	.setParameter(word)
-	.setParameter(top)
-	.setParameter(bottom)
+	.setParameter(csgdb,word)
+	.setParameter(csgdb,top)
+	.setParameter(csgdb,bottom)
 	.setRegenerate({
 		getObject()
 	})

@@ -7,7 +7,7 @@ CSG getObject(){
 	if(args==null)
 		args=["Test_key_here"]
 
-	StringParameter word = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Value",
+	StringParameter word = new StringParameter(csgdb,	args[0]+"_CaDoodle_TextGeneration_Value",
 										"Text",[])
 	HashSet<String> fontOptions = new HashSet<>();
 	//fontOptions.addAll(javafx.scene.text.Font.getFontNames() )
@@ -43,18 +43,18 @@ CSG getObject(){
 	ArrayList<String> option=new ArrayList<>()
 	option.addAll(fontOptions)
 	option.add("System Regular")
-	StringParameter font = new StringParameter(	args[0]+"_CaDoodle_TextGeneration_Font",
+	StringParameter font = new StringParameter(csgdb,	args[0]+"_CaDoodle_TextGeneration_Font",
 		option.get(option.size()-1),option)
 	CSG text = CSG.text(word.getStrValue() ,  10,  20, font.getStrValue())
-	CSGDatabase.saveDatabase();
+	csgdb.saveDatabase();
 	text=   text.toZMin()
 				.rotz(-90)
 				.moveToCenterX()
 				.moveToCenterY()
 				.setColor(Color.PINK)
 	return text
-		.setParameter(word)
-		.setParameter(font)
+		.setParameter(csgdb,word)
+		.setParameter(csgdb,font)
 		.setRegenerate({getObject()})
 }
 return getObject()

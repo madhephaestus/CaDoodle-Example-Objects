@@ -11,7 +11,7 @@ CSG getObject(){
 		args=["Test_key_here"]
 	ArrayList<Double> options = new  ArrayList<Double> ()
 	options.addAll(Arrays.asList(4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,64))
-	LengthParameter word = new LengthParameter(	args[0]+"_CaDoodle_ShereGeneration_Sides",
+	LengthParameter word = new LengthParameter(csgdb,	args[0]+"_CaDoodle_ShereGeneration_Sides",
 											Integer.parseInt(com.neuronrobotics.bowlerstudio.assets.ConfigurationDatabase.get("CaDoodle", "DefaultNumberOfSides", "16").toString())
 ,options)
 
@@ -21,9 +21,9 @@ CSG getObject(){
 	CSG toCSG = new Sphere(10,(int)(word.getMM()),getMM2).toCSG().rotx(90)
 	toCSG=toCSG.intersect(toCSG.getBoundingBox().toZMin())
 	CSG text = toCSG.toZMin().setColor(Color.PINK)
-	CSGDatabase.saveDatabase();
+	csgdb.saveDatabase();
 	return text
-		.setParameter(word)
+		.setParameter(csgdb,word)
 		.setRegenerate({getObject()})
 }
 return getObject()

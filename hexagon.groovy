@@ -12,7 +12,6 @@ CSG getObject(){
 	if(args==null)
 		args=["Test_key_here"]
 	CSG text =  new Hexagon(20,20).toCSG().toZMin().setColor(Color.DARKBLUE)
-	CSGDatabase.saveDatabase();
 	return text
 		.setRegenerate({getObject()})
 }

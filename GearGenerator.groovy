@@ -20,10 +20,10 @@ def getObject(){
 	for(int i=20;i<100;i++) {
 		options.add(i);
 	}
-	LengthParameter ateeth = new LengthParameter(	args[0]+"_CaDoodle_A-Teeth",34,options)
-	LengthParameter bteeth = new LengthParameter(	args[0]+"_CaDoodle_B-Teeth",24,options)
-	LengthParameter adiam = new LengthParameter(	args[0]+"_CaDoodle_A-Diam",26.15,options)
-	LengthParameter angle = new LengthParameter(	args[0]+"_CaDoodle_Angle",90,angles)
+	LengthParameter ateeth = new LengthParameter(csgdb,	args[0]+"_CaDoodle_A-Teeth",34,options)
+	LengthParameter bteeth = new LengthParameter(csgdb,	args[0]+"_CaDoodle_B-Teeth",24,options)
+	LengthParameter adiam = new LengthParameter(csgdb,	args[0]+"_CaDoodle_A-Diam",26.15,options)
+	LengthParameter angle = new LengthParameter(csgdb,	args[0]+"_CaDoodle_Angle",90,angles)
 	
 	// call a script from another library
 	List bevelGears = ScriptingEngine.gitScriptRun(
@@ -60,10 +60,10 @@ def getObject(){
 	agear.setColor(Color.SILVER)
 	bgear.setColor(Color.GREY)
 	for(CSG c:back) {
-		c.setParameter(ateeth)
-		.setParameter(bteeth)
-		.setParameter(adiam)
-		.setParameter(angle)
+		c.setParameter(csgdb,ateeth)
+		.setParameter(csgdb,bteeth)
+		.setParameter(csgdb,adiam)
+		.setParameter(csgdb,angle)
 	}
 	
 	return back
