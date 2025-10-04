@@ -1,2 +1,2 @@
 import com.neuronrobotics.bowlerstudio.scripting.cadoodle.CaDoodleVitamin; 
-return CaDoodleVitamin.get("vexStandoff",args)
+return new CaDoodleVitamin(csgdb).get("vexStandoff",args)

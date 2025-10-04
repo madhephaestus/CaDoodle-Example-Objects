@@ -1,2 +1,2 @@
 import com.neuronrobotics.bowlerstudio.scripting.cadoodle.CaDoodleVitamin; 
-return CaDoodleVitamin.get("vexFlatSheet",args)
+return new CaDoodleVitamin(csgdb).get("vexFlatSheet",args)

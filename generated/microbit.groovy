@@ -1,2 +1,2 @@
 import com.neuronrobotics.bowlerstudio.scripting.cadoodle.CaDoodleVitamin; 
-return CaDoodleVitamin.get("microbit",args)
+return new CaDoodleVitamin(csgdb).get("microbit",args)

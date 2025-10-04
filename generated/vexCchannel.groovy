@@ -1,2 +1,2 @@
 import com.neuronrobotics.bowlerstudio.scripting.cadoodle.CaDoodleVitamin; 
-return CaDoodleVitamin.get("vexCchannel",args)
+return new CaDoodleVitamin(csgdb).get("vexCchannel",args)

@@ -1,2 +1,2 @@
 import com.neuronrobotics.bowlerstudio.scripting.cadoodle.CaDoodleVitamin; 
-return CaDoodleVitamin.get("vex_Hex_Nut_Retainer",args)
+return new CaDoodleVitamin(csgdb).get("vex_Hex_Nut_Retainer",args)

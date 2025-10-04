@@ -1,2 +1,2 @@
 import com.neuronrobotics.bowlerstudio.scripting.cadoodle.CaDoodleVitamin; 
-return CaDoodleVitamin.get("ballChain",args)
+return new CaDoodleVitamin(csgdb).get("ballChain",args)

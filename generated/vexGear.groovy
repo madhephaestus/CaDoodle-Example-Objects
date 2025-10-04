@@ -1,2 +1,2 @@
 import com.neuronrobotics.bowlerstudio.scripting.cadoodle.CaDoodleVitamin; 
-return CaDoodleVitamin.get("vexGear",args)
+return new CaDoodleVitamin(csgdb).get("vexGear",args)

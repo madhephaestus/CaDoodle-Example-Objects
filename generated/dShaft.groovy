@@ -1,2 +1,2 @@
 import com.neuronrobotics.bowlerstudio.scripting.cadoodle.CaDoodleVitamin; 
-return CaDoodleVitamin.get("dShaft",args)
+return new CaDoodleVitamin(csgdb).get("dShaft",args)

@@ -1,2 +1,2 @@
 import com.neuronrobotics.bowlerstudio.scripting.cadoodle.CaDoodleVitamin; 
-return CaDoodleVitamin.get("brushlessMotor",args)
+return new CaDoodleVitamin(csgdb).get("brushlessMotor",args)
