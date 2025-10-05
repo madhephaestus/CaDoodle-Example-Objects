@@ -26,7 +26,7 @@ CSG getObject(){
 			0,radOpts)
 	LengthParameter chamfer = new LengthParameter(	args[0]+"_CaDoodle_CubeGeneration_Chamfer",
 			0,radOpts)
-	LengthParameter sides = new LengthParameter(	args[0]+"_CaDoodle_CubeGeneration_Sides",
+	LengthParameter sides = new LengthParameter(	args[0]+"_CaDoodle_CubeGeneration_R-Sides",
 		8,optionsSides)
 	CSG local = null
 	try {
@@ -37,7 +37,7 @@ CSG getObject(){
 				x.setMM(rad.getMM()*2+0.1)
 			if(y.getMM()<=rad.getMM()*2)
 				y.setMM(rad.getMM()*2+0.1)
-			RoundedCube cornerRadius = new RoundedCube(x,y,z).cornerRadius(rad.getMM())
+			RoundedCube cornerRadius = new RoundedCube(x.getMM(),y.getMM(),z.getMM()).cornerRadius(rad.getMM())
 			cornerRadius.setResolution((int)sides.getMM())
 			local=cornerRadius.toCSG()
 			chamfer.setMM(0)
@@ -53,7 +53,7 @@ CSG getObject(){
 			rad.setMM(0);
 		}
 		if(local==null)
-			local=new Cube(x,y,z ).toCSG()
+			local=new Cube(x.getMM(),y.getMM(),z.getMM() ).toCSG()
 	}catch(Throwable t) {
 		t.printStackTrace()
 	}
@@ -72,6 +72,9 @@ CSG getObject(){
 			.setParameter(rad)
 			.setParameter(chamfer)
 			.setParameter(sides)
+			.setParameter(x)
+			.setParameter(y)
+			.setParameter(z)
 			.setRegenerate({getObject()})
 }
 return getObject()
