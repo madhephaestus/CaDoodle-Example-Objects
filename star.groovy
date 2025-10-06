@@ -11,4 +11,4 @@ File f = ScriptingEngine
 )
 SVGLoad s = new SVGLoad(f.toURI())
 def holeParts = s.extrudeLayerToCSG(10,"Slice 1")
-return holeParts.toZMin().moveToCenterX().moveToCenterY().setColor(Color.YELLOW)
+return holeParts.toZMin().moveToCenterX().moveToCenterY().setColor(Color.YELLOW).setIsHole(false)
