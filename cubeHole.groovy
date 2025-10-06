@@ -49,7 +49,6 @@ CSG getObject(){
 			if(y.getMM()<=chamfer.getMM()*2)
 				y.setMM(chamfer.getMM()*2+0.1)
 			local=new ChamferedCube(x.getMM(),y.getMM(),z.getMM() ,chamfer.getMM()).toCSG()
-			local.setParameter(x).setParameter(y).setParameter(z);
 			rad.setMM(0);
 		}
 		if(local==null)
