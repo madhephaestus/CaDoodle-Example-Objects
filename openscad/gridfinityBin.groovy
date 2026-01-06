@@ -35,7 +35,7 @@ CSG getObject(){
 			"https://github.com/kennetek/gridfinity-rebuilt-openscad.git",
 			"gridfinity-rebuilt-bins.scad",[params])
 	
-	CSGDatabase.saveDatabase()
+	bin.setNoScale(true)
 	return bin
 	.setParameter(divy)
 	.setParameter(divx)

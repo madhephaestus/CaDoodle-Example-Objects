@@ -32,7 +32,8 @@ CSG getObject(){
 			"https://github.com/kennetek/gridfinity-rebuilt-openscad.git",
 			"gridfinity-rebuilt-baseplate.scad",[params])
 	
-	CSGDatabase.saveDatabase()
+	bin.setNoScale(true)
+
 	return bin
 	.setParameter(mag)
 	.setParameter(y)
