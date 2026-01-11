@@ -15,7 +15,7 @@ CSG getObject(){
 	}
 	ArrayList<Double> options = new  ArrayList<Double> ()
 	options.addAll(Arrays.asList(23,30))
-	LengthParameter type = new LengthParameter(csgdb,	args[0]+"_CaDoodle_gggears_Type","spurgear",{"spurgear"})
+	LengthParameter type = new LengthParameter(csgdb,	args[0]+"_CaDoodle_gggears_Type","spurgear",Arrays.asList("spurgear")))
 	LengthParameter pitch = new LengthParameter(csgdb,	args[0]+"_CaDoodle_gggears_Pitch",23,options)
 	
 	HashMap<String,Object> params=new HashMap<String, Object>();
