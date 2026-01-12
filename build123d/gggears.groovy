@@ -14,6 +14,7 @@ List<CSG> getObject(){
 		args=["Test_key_here"]
 	}
 	ArrayList<Double> options = new  ArrayList<Double> ()
+	ArrayL
 	options.addAll(Arrays.asList(23,30))
 	StringParameter type = new StringParameter(csgdb,
 			args[0]+"_CaDoodle_gggears_Type","spurgear",
@@ -38,6 +39,7 @@ List<CSG> getObject(){
 				.setRegenerate({getObject()})
 	}
 	return all
+
 }
 
 return getObject()
