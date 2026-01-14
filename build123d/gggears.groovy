@@ -29,6 +29,13 @@ List<CSG> getObject(){
 		args[0]+"_CaDoodle_gggears_Height",
 		5,
 		new  ArrayList<Double> (Arrays.asList(1,5,20)))
+	
+	ArrayList<Double> modOpts = new  ArrayList<Double> (Arrays.asList(0.5,0.75,0.8,1,1.25,1.5,1.75,2,2.5,2.75,3,3.25,3.5,3.75,4,4.5,5,5.5,6,7,8))
+	LengthParameter module = new LengthParameter(csgdb,
+		args[0]+"_CaDoodle_gggears_Module",
+		1,
+		modOpts)
+
 	ArrayList<Object> params=new ArrayList< Object>();
 	params.add("gggears")
 	params.add( type.getStrValue())
@@ -36,6 +43,8 @@ List<CSG> getObject(){
 	params.add(numTeeth.getMM())
 	params.add("--height")
 	params.add(height.getMM())
+	params.add("--module")
+	params.add(module.getMM())
 	List<CSG> all=	Build123dLoader.toCSG(csgdb, params)
 
 	for(CSG bin:all) {
@@ -43,6 +52,7 @@ List<CSG> getObject(){
 		bin.setParameter(csgdb,type)
 			.setParameter(csgdb,numTeeth)
 			.setParameter(csgdb,height)
+			.setParameter(csgdb,module)
 			.setRegenerate({getObject()})
 	}
 	return all

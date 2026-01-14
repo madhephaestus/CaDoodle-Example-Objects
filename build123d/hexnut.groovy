@@ -17,8 +17,8 @@ List<CSG> getObject(){
 
 
 	ArrayList<Object> params=new ArrayList< Object>();
+	params.add("bd_warehouse")
 	params.add("hexnut")
-
 	List<CSG> all=	Build123dLoader.toCSG(csgdb, params)
 
 	for(CSG bin:all) {
