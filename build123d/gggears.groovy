@@ -19,25 +19,26 @@ List<CSG> getObject(){
 		options.add(i);
 	}
 	StringParameter type = new StringParameter(csgdb,
-			args[0]+"_CaDoodle_gggears_Type","spurgear",
-			new ArrayList<String>(Arrays.asList("helicalgear","spurgear")))
+			args[0]+"_CaDoodle_py_gearwork_Type","SpurGear",
+			new ArrayList<String>(Arrays.asList("HelicalGear","SpurGear")))
 	LengthParameter numTeeth = new LengthParameter(csgdb,
-			args[0]+"_CaDoodle_gggears_Teeth",
+			args[0]+"_CaDoodle_py_gearworks_Teeth",
 			23,
 			options)
 	LengthParameter height = new LengthParameter(csgdb,
-		args[0]+"_CaDoodle_gggears_Height",
+		args[0]+"_CaDoodle_py_gearworks_Height",
 		5,
 		new  ArrayList<Double> (Arrays.asList(1,5,20)))
 	
 	ArrayList<Double> modOpts = new  ArrayList<Double> (Arrays.asList(0.5,0.75,0.8,1,1.25,1.5,1.75,2,2.5,2.75,3,3.25,3.5,3.75,4,4.5,5,5.5,6,7,8))
 	LengthParameter module = new LengthParameter(csgdb,
-		args[0]+"_CaDoodle_gggears_Module",
+		args[0]+"_CaDoodle_py_gearworks_Module",
 		1,
 		modOpts)
 
+
 	ArrayList<Object> params=new ArrayList< Object>();
-	params.add("gggears")
+	params.add("py_gearworks")
 	params.add( type.getStrValue())
 	params.add("--number-of-teeth")
 	params.add(numTeeth.getMM())
