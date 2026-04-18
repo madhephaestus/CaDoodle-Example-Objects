@@ -9,7 +9,7 @@ CSG getObject(){
 	if(args==null)
 		args=["Test_key_here"]
 	ArrayList<Double> options = new  ArrayList<Double> ()
-	options.addAll(Arrays.asList(1,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,100))
+	options.addAll(Arrays.asList(1,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,100,200,300,400,500,600,700,800,900,1000))
 	ArrayList<Double> optionsSides = new  ArrayList<Double> ()
 	optionsSides.addAll(Arrays.asList(6,7,8,9,10,11,12,13,14,15,16,17,18,19,32))
 	LengthParameter x = new LengthParameter(	args[0]+"_CaDoodle_CubeGeneration_Y",
