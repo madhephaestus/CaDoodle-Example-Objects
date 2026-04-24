@@ -22,7 +22,7 @@ CSG getObject(CSGDatabaseInstance csgdb){
 	int getMM = (int)word.getMM()
 	int numberOfPoints = getMM;
 	double angle = 360.0/numberOfPoints;
-	double totalRad = top.getMM()
+	double totalRad = top.getMM()/2
 	double innerPercentage = bottom.getMM()
 	double innerRad = totalRad*innerPercentage;
 	def parts = []
