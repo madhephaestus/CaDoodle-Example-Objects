@@ -14,7 +14,7 @@ CSG getObject(CSGDatabaseInstance csgdb){
 	ArrayList<Double> options = new  ArrayList<Double> ()
 	options.addAll(Arrays.asList(3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20))
 	LengthParameter word = new LengthParameter(csgdb,	args[0]+"_CaDoodle_StarSide_Points",
-	6,options)
+	5,options)
 	LengthParameter top = new LengthParameter(csgdb,	args[0]+"_CaDoodle_StarTop_Outer",
 	20,[])
 	LengthParameter bottom = new LengthParameter(csgdb,	args[0]+"_CaDoodle_StarBottom_Inner",
@@ -29,7 +29,10 @@ CSG getObject(CSGDatabaseInstance csgdb){
 	for(double i=0;i<360;i+=angle) {
 		def points = [
 			new Vector3d(totalRad, 0, 0),
+			new Vector3d(totalRad, 0, 10),
 			new Vector3d(0, 0, 10),
+			new Vector3d(innerRad, 0, 10).transform(new Transform().rotz(angle/2.0)),
+			new Vector3d(innerRad, 0, 10).transform(new Transform().rotz(-angle/2.0)),
 			new Vector3d(innerRad, 0, 0).transform(new Transform().rotz(angle/2.0)),
 			new Vector3d(innerRad, 0, 0).transform(new Transform().rotz(-angle/2.0)),
 			new Vector3d(0, 0, 0)
