@@ -38,7 +38,7 @@ CSG getObject(){
 			new Vector3d(innerRad, 0, 0).transform(new Transform().rotz(-angle/2.0)),
 			new Vector3d(0, 0, 0)
 		]
-		parts.add( HullUtil.hull(points).rotz(i))
+		parts.add( HullUtil.hull(points).movex(0.01).rotz(i))
 	}
 	CSG star = CSG.unionAll(parts)
  	CSGDatabase.saveDatabase();
