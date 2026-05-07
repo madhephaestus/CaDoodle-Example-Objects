@@ -1,13 +1,9 @@
-import  eu.mihosoft.vrl.v3d.ext.quickhull3d.*
 import eu.mihosoft.vrl.v3d.parametrics.CSGDatabase
 import eu.mihosoft.vrl.v3d.parametrics.CSGDatabaseInstance
 import eu.mihosoft.vrl.v3d.parametrics.LengthParameter
-import eu.mihosoft.vrl.v3d.CSG
-import eu.mihosoft.vrl.v3d.Transform
 import eu.mihosoft.vrl.v3d.Vector3d
 import eu.mihosoft.vrl.v3d.*
 import javafx.scene.paint.Color
-import eu.mihosoft.vrl.v3d.Cube
 CSG getObject(CSGDatabaseInstance csgdb){
 	if(args==null)
 		args=["Test_key_here"]
@@ -21,25 +17,30 @@ CSG getObject(CSGDatabaseInstance csgdb){
 	0.5,[0.1,0.25,0.5,0.75,0.9,1.0])
 	int getMM = (int)word.getMM()
 	int numberOfPoints = getMM;
-	double angle = 360.0/numberOfPoints;
 	double totalRad = top.getMM()/2
 	double innerPercentage = bottom.getMM()
 	double innerRad = totalRad*innerPercentage;
-	def parts = []
-	for(double i=0;i<360;i+=angle) {
-		def points = [
-			new Vector3d(totalRad, 0, 0),
-			new Vector3d(totalRad, 0, 10),
-			new Vector3d(0, 0, 10),
-			new Vector3d(innerRad, 0, 10).transform(new Transform().rotz(angle/2.0+0.1)),
-			new Vector3d(innerRad, 0, 10).transform(new Transform().rotz(-angle/2.0+0.1)),
-			new Vector3d(innerRad, 0, 0).transform(new Transform().rotz(angle/2.0+0.1)),
-			new Vector3d(innerRad, 0, 0).transform(new Transform().rotz(-angle/2.0+0.1)),
-			new Vector3d(0, 0, 0)
-		]
-		parts.add( HullUtil.hull(points).movex(0.001).rotz(i))
-	}
-	CSG star = CSG.unionAll(parts)
+    double angle = 360.0 / numberOfPoints
+    ArrayList<Vertex> perimeter = new ArrayList<>()
+    for (int i = 0; i < numberOfPoints; i++) {
+		
+        double outerAngle = Math.toRadians(i * angle)
+        double innerAngle = Math.toRadians(i * angle + angle / 2.0)
+        // Outer point (tip of spike)
+        perimeter.add(new Vertex(
+            totalRad * Math.cos(outerAngle),
+            totalRad * Math.sin(outerAngle),
+            0.0
+        ))
+        // Inner point (valley between spikes)
+        perimeter.add(new Vertex(
+            innerRad * Math.cos(innerAngle),
+            innerRad * Math.sin(innerAngle),
+            0.0
+        ))
+    }
+	Vector3d extrudeDir = new Vector3d(0, 0, 10);
+	CSG star =Extrude.extrude(extrudeDir, new Polygon(perimeter))
 	return star.setColor(Color.YELLOW)
 	.setParameter(csgdb,word)
 	.setParameter(csgdb,top)
