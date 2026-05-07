@@ -23,7 +23,7 @@ CSG getObject(CSGDatabaseInstance csgdb){
     double angle = 360.0 / numberOfPoints
     ArrayList<Vertex> perimeter = new ArrayList<>()
     for (int i = 0; i < numberOfPoints; i++) {
-		
+	
         double outerAngle = Math.toRadians(i * angle)
         double innerAngle = Math.toRadians(i * angle + angle / 2.0)
         // Outer point (tip of spike)
